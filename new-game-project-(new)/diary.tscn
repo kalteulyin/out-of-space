@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://14fr5f6ax8p1"]
+
+[ext_resource type="Texture2D" uid="uid://g6mt2cudgjg4" path="res://WhatsApp Image 2026-10-24 at 18.00.28 (3).jpeg" id="1_588vs"]
+[ext_resource type="Script" uid="uid://cxvnr314f0po2" path="res://diary.gd" id="1_avw01"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8cxg0"]
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au8v7"]
+radius = 19.0
+height = 42.0
+
+[node name="Diary" type="RigidBody2D" unique_id=190488465]
+collision_layer = 15
+collision_mask = 3
+mass = 0.3
+physics_material_override = SubResource("PhysicsMaterial_8cxg0")
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_avw01")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412022298]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_588vs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2130085636]
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_au8v7")

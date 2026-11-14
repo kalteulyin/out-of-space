@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://df8csgcqhq4xj"]
+
+[ext_resource type="Texture2D" uid="uid://dgm1eqkjo35ew" path="res://R.jpg" id="1_nxogm"]
+[ext_resource type="PackedScene" uid="uid://dliy7edkt4e7y" path="res://tile_map_recent.tscn" id="2_3253y"]
+[ext_resource type="PackedScene" uid="uid://ckam585gujbx2" path="res://Items_floating.tscn" id="3_3253y"]
+[ext_resource type="PackedScene" uid="uid://c3ao3pd6k16lr" path="res://pen.tscn" id="4_u3cyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cxg0"]
+size = Vector2(20, 1022.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1u7o"]
+size = Vector2(20, 324)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7jhh"]
+size = Vector2(1171, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h0ch"]
+size = Vector2(311, 54)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u3cyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3cyc"]
+size = Vector2(285, 81)
+
+[node name="Node2D" type="Node2D" unique_id=1219225338]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1944810539]
+position = Vector2(563, 238)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nxogm")
+
+[node name="TileMap" parent="." unique_id=460952455 instance=ExtResource("2_3253y")]
+position = Vector2(25, 0)
+
+[node name="Borders" type="Node2D" parent="." unique_id=413978834]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=2109044469]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=383400681]
+position = Vector2(-7, 154.3125)
+shape = SubResource("RectangleShape2D_8cxg0")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Borders" unique_id=1482224845]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D5" unique_id=1998568390]
+position = Vector2(305, 144)
+shape = SubResource("RectangleShape2D_t1u7o")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=1040167110]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=841423183]
+position = Vector2(1163, 331)
+shape = SubResource("RectangleShape2D_8cxg0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1851436666]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=789928905]
+position = Vector2(877, -8)
+shape = SubResource("RectangleShape2D_m7jhh")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Borders" unique_id=794064271]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D6" unique_id=509836373]
+position = Vector2(159.5, 332)
+shape = SubResource("RectangleShape2D_1h0ch")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders" unique_id=16628217]
+collision_layer = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4" unique_id=736841270]
+position = Vector2(588, 659.5)
+shape = SubResource("RectangleShape2D_m7jhh")
+
+[node name="AllItems" parent="." unique_id=1064251874 instance=ExtResource("3_3253y")]
+position = Vector2(41, -39)
+
+[node name="TriggerBody" type="RigidBody2D" parent="." unique_id=1515725081]
+position = Vector2(75, -8)
+collision_layer = 31
+collision_mask = 31
+mass = 1.5
+physics_material_override = SubResource("PhysicsMaterial_u3cyc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerBody" unique_id=287579619]
+position = Vector2(72, -29.5)
+shape = SubResource("RectangleShape2D_u3cyc")
+
+[node name="Pen" parent="." unique_id=1760027635 instance=ExtResource("4_u3cyc")]
+position = Vector2(183, 168)

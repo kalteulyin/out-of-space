@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c3ao3pd6k16lr"]
+
+[ext_resource type="Texture2D" uid="uid://cko6q125a5cm6" path="res://WhatsApp Image 2026-10-24 at 18.00.29.jpeg" id="1_44os2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y2354"]
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3253y"]
+radius = 4.0
+height = 40.0
+
+[node name="Pen" type="RigidBody2D" unique_id=1760027635]
+mass = 0.5
+physics_material_override = SubResource("PhysicsMaterial_y2354")
+gravity_scale = 0.0
+linear_damp_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=852789536]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_44os2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1914758604]
+position = Vector2(0, -4.9999995)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CapsuleShape2D_3253y")

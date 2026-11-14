@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ikygfdm36ceq"]
+
+[ext_resource type="Texture2D" uid="uid://gvksa57n01hv" path="res://WhatsApp Image 2026-10-24 at 18.00.29 (1).jpeg" id="1_rajp7"]
+[ext_resource type="Script" uid="uid://3r8twdg75p" path="res://gps.gd" id="1_rjufp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rjufp"]
+bounce = 7.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b6lod"]
+radius = 8.0
+height = 32.0
+
+[node name="GPS" type="RigidBody2D" unique_id=1891016164]
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_rjufp")
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_rjufp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1405425048]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("1_rajp7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=887806643]
+shape = SubResource("CapsuleShape2D_b6lod")

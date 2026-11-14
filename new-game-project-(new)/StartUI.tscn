@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://0npbdc3v4re2"]
+
+[ext_resource type="Script" uid="uid://dmqx683ontyf6" path="res://start_ui.gd" id="1_1w7y4"]
+[ext_resource type="Texture2D" uid="uid://dgm1eqkjo35ew" path="res://R.jpg" id="1_7t477"]
+
+[node name="StartUi" type="Control" unique_id=1216414536]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1w7y4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=734604460]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_7t477")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1353278909]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=720663815]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1058143541]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 32
+text = "Start
+"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=809512334]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Quit
+
+"
+
+[node name="Label" type="Label" parent="." unique_id=1179986581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -172.0
+offset_right = 210.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Game Name"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

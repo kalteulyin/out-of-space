@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ckam585gujbx2"]
+
+[ext_resource type="PackedScene" uid="uid://bxf8kkbvo3lhk" path="res://bottle.tscn" id="1_gjefb"]
+[ext_resource type="PackedScene" uid="uid://14fr5f6ax8p1" path="res://diary.tscn" id="2_48x6y"]
+[ext_resource type="PackedScene" uid="uid://ikygfdm36ceq" path="res://gps.tscn" id="3_au8v7"]
+[ext_resource type="PackedScene" uid="uid://c3ao3pd6k16lr" path="res://pen.tscn" id="4_b6lod"]
+
+[node name="AllItems" type="Node2D" unique_id=1064251874]
+
+[node name="Bottle" parent="." unique_id=1834728720 instance=ExtResource("1_gjefb")]
+position = Vector2(-132, -237)
+
+[node name="Bottle2" parent="." unique_id=298168853 instance=ExtResource("1_gjefb")]
+position = Vector2(-129, -240)
+
+[node name="Bottle3" parent="." unique_id=1392608776 instance=ExtResource("1_gjefb")]
+position = Vector2(-153, -242)
+
+[node name="Bottle4" parent="." unique_id=1786447954 instance=ExtResource("1_gjefb")]
+position = Vector2(-151, -249)
+
+[node name="Diary" parent="." unique_id=190488465 instance=ExtResource("2_48x6y")]
+position = Vector2(51, 128)
+
+[node name="Diary2" parent="." unique_id=1091957890 instance=ExtResource("2_48x6y")]
+position = Vector2(56, 133)
+
+[node name="Diary3" parent="." unique_id=1994617480 instance=ExtResource("2_48x6y")]
+position = Vector2(38, 122)
+collision_mask = 7
+
+[node name="Diary4" parent="." unique_id=1756339103 instance=ExtResource("2_48x6y")]
+position = Vector2(50, 126)
+
+[node name="GPS" parent="." unique_id=1891016164 instance=ExtResource("3_au8v7")]
+position = Vector2(43, 129)
+
+[node name="GPS2" parent="." unique_id=1627988776 instance=ExtResource("3_au8v7")]
+position = Vector2(46, 121)
+
+[node name="GPS3" parent="." unique_id=974371810 instance=ExtResource("3_au8v7")]
+position = Vector2(53, 117)
+
+[node name="GPS4" parent="." unique_id=1344624652 instance=ExtResource("3_au8v7")]
+position = Vector2(47, 143)
+
+[node name="Pen" parent="." unique_id=1760027635 instance=ExtResource("4_b6lod")]
+position = Vector2(48, 126)

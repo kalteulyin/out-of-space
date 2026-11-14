@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c8o783onkffmr"]
+
+[ext_resource type="Texture2D" uid="uid://dmfgwdcoolyrr" path="res://WhatsApp Image 2026-10-24 at 18.00.28 (2).jpeg" id="2_nudqs"]
+
+[node name="Node2D" type="Node2D" unique_id=556730903]
+
+[node name="WaterBottle" type="Sprite2D" parent="." unique_id=1441737979]
+position = Vector2(201, 373)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_nudqs")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="WaterBottle" unique_id=398704230]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WaterBottle/RigidBody2D" unique_id=125257161]
+polygon = PackedVector2Array(-182, -726, 4, -764, 196, -730, 194, -458, 264, -440, 318, -276, 440, 16, 424, 254, 314, 374, 314, 860, 44, 932, -226, 900, -306, 856, -306, 370, -410, 260, -444, 110, -402, -78, -312, -264, -254, -438, -200, -464)

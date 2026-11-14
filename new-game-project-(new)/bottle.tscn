@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bxf8kkbvo3lhk"]
+
+[ext_resource type="Texture2D" uid="uid://dmfgwdcoolyrr" path="res://WhatsApp Image 2026-10-24 at 18.00.28 (2).jpeg" id="1_6k8ux"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xiyir"]
+friction = 0.5
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8cxg0"]
+radius = 19.0
+height = 40.0
+
+[node name="Bottle" type="RigidBody2D" unique_id=1834728720]
+disable_mode = 2
+collision_layer = 15
+collision_mask = 3
+mass = 0.4
+physics_material_override = SubResource("PhysicsMaterial_xiyir")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_velocity = Vector2(0.01, 0.02)
+linear_damp_mode = 1
+angular_damp_mode = 1
+
+[node name="WaterBottle" type="Sprite2D" parent="." unique_id=1441737979]
+position = Vector2(201, 373)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_6k8ux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578790466]
+position = Vector2(201, 376)
+shape = SubResource("CapsuleShape2D_8cxg0")
